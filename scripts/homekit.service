@@ -1,0 +1,14 @@
+[Unit]
+Description=HomeKit Server
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+Restart=always
+RestartSec=5s
+WorkingDirectory=/opt/homekit
+ExecStart=/opt/homekit/homekit
+
+[Install]
+WantedBy=multi-user.target
